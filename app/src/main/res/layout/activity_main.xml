@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/main_logo" />
+
+    <Button
+        android:id="@+id/my_profile"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@color/my_profile_back"
+        android:drawableStart="@drawable/my_profile"
+        android:drawablePadding="30dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/my_profile"
+        android:textColor="@color/main_text_1"
+        android:textSize="@dimen/main_text_size" />
+
+    <Button
+        android:id="@+id/about_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/about_us_back"
+        android:drawableStart="@drawable/about_us"
+        android:drawablePadding="30dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/about_us"
+        android:textColor="@color/main_text_1"
+        android:textSize="@dimen/main_text_size"
+        android:textAlignment="textStart" />
+
+    <Button
+        android:id="@+id/links"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/links_back"
+        android:drawableStart="@drawable/links"
+        android:drawablePadding="30dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/links"
+        android:textColor="@color/about_us_back"
+        android:textSize="@dimen/main_text_size"
+        android:textAlignment="textStart"/>
+
+</LinearLayout>

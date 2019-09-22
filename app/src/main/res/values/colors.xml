@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="my_profile_back">#ff5959</color>
+    <color name="about_us_back">#00ddcc</color>
+    <color name="links_back">#faf563</color>
+    <color name="main_text_1">#faf562</color>
+
+</resources>
