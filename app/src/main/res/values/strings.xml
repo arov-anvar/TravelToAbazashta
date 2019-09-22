@@ -3,4 +3,11 @@
     <string name="my_profile">мой профиль</string>
     <string name="links">сслыки</string>
     <string name="about_us">о нас</string>
+    <string name="input">войти</string>
+    <string name="add_users">добавить</string>
+    <string name="registration">зарегистрироваться</string>
+    <string name="history">история</string>
+    <string name="culture">культура</string>
+    <string name="language">язык</string>
+    <string name="start">Начать</string>
 </resources>

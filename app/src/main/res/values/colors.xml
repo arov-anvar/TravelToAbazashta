@@ -7,5 +7,8 @@
     <color name="about_us_back">#00ddcc</color>
     <color name="links_back">#faf563</color>
     <color name="main_text_1">#faf562</color>
+    <color name="back_mountain">#075f63</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#FF5252</color>
 
 </resources>

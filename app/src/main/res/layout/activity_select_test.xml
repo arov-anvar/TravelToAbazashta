@@ -4,64 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_back"
+    android:background="@color/back_mountain"
     android:orientation="vertical"
-    tools:context=".view.MainActivity">
+    tools:context=".view.SelectTest">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/main_logo" />
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:src="@drawable/mountain" />
 
     <Button
-        android:id="@+id/my_profile"
+        android:id="@+id/history"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@color/my_profile_back"
-        android:drawableStart="@drawable/my_profile"
-        android:drawablePadding="30dp"
-        android:onClick="myProfile"
+        android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/my_profile"
+        android:text="@string/history"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
     <Button
-        android:id="@+id/about_us"
+        android:id="@+id/language"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@color/about_us_back"
-        android:drawableStart="@drawable/about_us"
-        android:drawablePadding="30dp"
-        android:onClick="aboutUs"
+        android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/about_us"
-        android:textAlignment="textStart"
+        android:text="@string/language"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
     <Button
-        android:id="@+id/links"
+        android:id="@+id/culture"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@color/links_back"
-        android:drawableStart="@drawable/links"
-        android:drawablePadding="30dp"
-        android:onClick="links"
+        android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/links"
-        android:textAlignment="textStart"
+        android:text="@string/culture"
         android:textColor="@color/about_us_back"
         android:textSize="@dimen/main_text_size" />
+
 
 </LinearLayout>

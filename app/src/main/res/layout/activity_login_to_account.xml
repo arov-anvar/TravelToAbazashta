@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_back"
     android:orientation="vertical"
-    tools:context=".view.MainActivity">
+    tools:context=".view.LoginToAccount">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -14,53 +14,46 @@
         android:layout_marginTop="50dp"
         app:srcCompat="@drawable/main_logo" />
 
-    <Button
-        android:id="@+id/my_profile"
+    <EditText
+        android:id="@+id/input_login"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:background="@color/my_profile_back"
-        android:drawableStart="@drawable/my_profile"
-        android:drawablePadding="30dp"
-        android:onClick="myProfile"
+        android:background="@color/about_us_back"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/my_profile"
+        android:textAlignment="center"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
     <Button
-        android:id="@+id/about_us"
+        android:id="@+id/input_btn"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@color/about_us_back"
-        android:drawableStart="@drawable/about_us"
-        android:drawablePadding="30dp"
-        android:onClick="aboutUs"
+        android:background="@color/my_profile_back"
+        android:onClick="input"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/about_us"
-        android:textAlignment="textStart"
+        android:text="@string/input"
+        android:textAlignment="center"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
     <Button
-        android:id="@+id/links"
+        android:id="@+id/add_user"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@color/links_back"
-        android:drawableStart="@drawable/links"
-        android:drawablePadding="30dp"
-        android:onClick="links"
+        android:onClick="addUser"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/links"
-        android:textAlignment="textStart"
+        android:text="@string/add_users"
+        android:textAlignment="center"
         android:textColor="@color/about_us_back"
         android:textSize="@dimen/main_text_size" />
 
