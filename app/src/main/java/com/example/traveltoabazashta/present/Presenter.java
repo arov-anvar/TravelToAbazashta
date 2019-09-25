@@ -1,13 +1,16 @@
-package com.example.traveltoabazashta.model;
+package com.example.traveltoabazashta.present;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.traveltoabazashta.model.DataQuestion;
+import com.example.traveltoabazashta.model.DatabaseHelper;
+
 import java.util.ArrayList;
 
-public class Model {
+public class Presenter {
 
     private DatabaseHelper dbHelper;
     private SQLiteDatabase database;
@@ -15,12 +18,12 @@ public class Model {
     private Cursor myCursor;
 
 
-    public Model(Context context) {
+    public Presenter(Context context) {
         mContext = context;
         dbHelper = new DatabaseHelper(mContext);
     }
 
-    public String getTestName(int indexTest) {
+    private String getTestName(int indexTest) {
         switch (indexTest) {
             case 1:
                 return "culture";
@@ -41,11 +44,12 @@ public class Model {
         for (int i = 0; i < myCursor.getCount(); i++) {
             if (myCursor.getInt(7) == indexTest) {
                 data.add(new DataQuestion(  myCursor.getString(1),
-                                            myCursor.getString(2),
-                                            myCursor.getString(3),
-                                            myCursor.getString(4),
-                                            myCursor.getString(5),
-                                            myCursor.getInt(6)));
+                        myCursor.getString(2),
+                        myCursor.getString(3),
+                        myCursor.getString(4),
+                        myCursor.getString(5),
+                        myCursor.getInt(6),
+                        myCursor.getString(7)));
             }
             myCursor.moveToNext();
         }
@@ -53,6 +57,7 @@ public class Model {
         myCursor.close();
         return data;
     }
+
 
     public void setRecord(int result, int userId, int indexTest) {
         int record;
@@ -71,5 +76,4 @@ public class Model {
             myCursor.close();
         }
     }
-
 }

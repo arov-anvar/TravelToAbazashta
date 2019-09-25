@@ -13,89 +13,110 @@
         android:layout_height="340dp"
         android:src="@drawable/mountain" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:background="@drawable/back_question"
-        android:padding="10dp"
-        android:text="slskajsalkdf\njalskfj\naslkfj"
-        android:textColor="@color/main_text_1"
-        android:textSize="20sp" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/answer1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:background="@color/main_text_1"
-        android:onClick="checkClick"
-        android:text="@string/start"
-        android:textColor="@color/back_mountain"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/answer2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:background="@color/main_text_1"
-        android:onClick="checkClick"
-        android:text="@string/start"
-        android:textColor="@color/back_mountain"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/answer3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:background="@color/main_text_1"
-        android:onClick="checkClick"
-        android:text="@string/start"
-        android:textColor="@color/back_mountain"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/answer4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:background="@color/main_text_1"
-        android:onClick="checkClick"
-        android:text="@string/start"
-        android:textColor="@color/back_mountain"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:text="@string/info"
-            android:textColor="@color/main_text_1"
-            android:textSize="@dimen/testing_btn_bottom"
-            android:background="@drawable/back_question" />
+            android:orientation="vertical">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:text="@string/next"
-            android:textColor="@color/main_text_1"
-            android:textSize="@dimen/testing_btn_bottom"
-            android:background="@drawable/back_question" />
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/back_question"
+                android:padding="10dp"
+                android:text="slskajsalkdf\njalskfj\naslkfj"
+                android:textColor="@color/main_text_1"
+                android:textSize="20sp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@color/main_text_1"
+                android:onClick="checkClick"
+                android:text="@string/start"
+                android:textColor="@color/back_mountain"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@color/main_text_1"
+                android:onClick="checkClick"
+                android:text="@string/start"
+                android:textColor="@color/back_mountain"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@color/main_text_1"
+                android:onClick="checkClick"
+                android:text="@string/start"
+                android:textColor="@color/back_mountain"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@color/main_text_1"
+                android:onClick="checkClick"
+                android:text="@string/start"
+                android:textColor="@color/back_mountain"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_question"
+                    android:onClick="checkClick"
+                    android:text="@string/info"
+                    android:textColor="@color/main_text_1"
+                    android:textSize="@dimen/testing_btn_bottom"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_question"
+                    android:onClick="checkClick"
+                    android:text="@string/next"
+                    android:textColor="@color/main_text_1"
+                    android:textSize="@dimen/testing_btn_bottom"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

@@ -17,7 +17,7 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="@color/main_text_1"
@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/culture"
                 android:textColor="@color/main_text_1"
                 android:textSize="25sp" />
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/language"
                 android:textColor="@color/main_text_1"
                 android:textSize="25sp" />
@@ -81,7 +81,7 @@
                 android:id="@+id/culture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/culture"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
@@ -90,7 +90,7 @@
                 android:id="@+id/language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/language"
                 android:textColor="@color/white"
                 android:textSize="25sp" />

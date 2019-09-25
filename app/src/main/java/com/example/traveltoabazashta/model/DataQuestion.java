@@ -2,7 +2,7 @@ package com.example.traveltoabazashta.model;
 
 public class DataQuestion {
 
-    private String question, answer1, answer2, answer3, answer4;
+    private String question, answer1, answer2, answer3, answer4, info;
     private int rightAnswer;
 
     public String getQuestion() {
@@ -29,12 +29,17 @@ public class DataQuestion {
         return rightAnswer;
     }
 
-    DataQuestion(String q, String a1, String a2, String a3, String a4, int right) {
+    public String getInfo() {
+        return info;
+    }
+
+    public DataQuestion(String q, String a1, String a2, String a3, String a4, int right, String i) {
         question = q;
         answer1 = a1;
         answer2 = a2;
         answer3 = a3;
         answer4 = a4;
         rightAnswer = right;
+        info = i;
     }
 }
