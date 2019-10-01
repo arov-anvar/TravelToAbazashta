@@ -24,6 +24,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ANSWER4 = "answer4";
     public static final String COLUMN_RIGHT_ANSWER = "rightAnswer";
     public static final String COLUMN_TYPE = "type";
+    public static final String COLUMN_USER_NAME = "userName";
+    public static final String COLUMN_CULTURE = "culture";
+    public static final String COLUMN_HISTORY = "history";
+    public static final String COLUMN_LANGUAGE = "language";
     public static final String TABLE_QUESTION = "questions";
     public static final String TABLE_USERS = "users";
 

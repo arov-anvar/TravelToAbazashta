@@ -34,7 +34,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@color/my_profile_back"
-        android:onClick="input"
+        android:onClick="registration"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
         android:text="@string/registration"

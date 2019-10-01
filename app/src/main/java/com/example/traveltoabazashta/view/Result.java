@@ -24,17 +24,20 @@ public class Result extends AppCompatActivity {
     private static final int ANIMATION_VALUE = 2000;
     private static final int BUNDLE_KEY_ZERO_INDEX = 0;
     private static final Integer BUNDLE_KEY_SECOND_INDEX = 2;
-    private static final int VALUE_QUESTION = 25;
-
     private static final String RESULT = "Результаты";
     private static final String RIGHT = "Правильно";
     private static final String NO_RIGHT = "Не правильно";
     private static final String EMPTY_STRING = "";
 
+    private final int COUNT_RIGHT = 25;
+
+    private int rightAnswer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        rightAnswer = getIntent().getIntExtra("rightAnswer", 0);
         showPieChart();
 
     }
@@ -49,7 +52,7 @@ public class Result extends AppCompatActivity {
         mPieChart.animateXY(ANIMATION_VALUE, ANIMATION_VALUE);
 
         List<PieEntry> yvalues = new ArrayList<>();
-        yvalues.add(new PieEntry(10, BUNDLE_KEY_ZERO_INDEX));
+        yvalues.add(new PieEntry(rightAnswer, BUNDLE_KEY_ZERO_INDEX));
         yvalues.add(new PieEntry(10, BUNDLE_KEY_SECOND_INDEX));
         PieDataSet dataSet = new PieDataSet(yvalues, EMPTY_STRING);
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);

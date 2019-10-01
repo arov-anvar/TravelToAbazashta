@@ -76,4 +76,25 @@ public class Presenter {
             myCursor.close();
         }
     }
+
+    public ArrayList<String> getUserLogins() {
+        ArrayList<String> loginUsers = new ArrayList<>();
+        database = dbHelper.getReadableDatabase();
+        myCursor = database.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_USERS, null);
+        myCursor.moveToFirst();
+        for (int i = 0; i < myCursor.getCount(); ++i) {
+            loginUsers.add(myCursor.getString(1));
+        }
+        database.close();
+        myCursor.close();
+        return loginUsers;
+    }
+
+    public void addNewUser(String name) {
+        database = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(DatabaseHelper.COLUMN_USER_NAME, name);
+        database.insert(DatabaseHelper.TABLE_USERS, null, cv);
+        database.close();
+    }
 }
