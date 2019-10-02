@@ -11,4 +11,7 @@
     <color name="white">#ffffff</color>
     <color name="red">#FF5252</color>
     <color name="green">#FFAB40</color>
+    <color name="right_answer">#00ff7f</color>
+    <color name="lose_answer">#c70000</color>
+
 </resources>

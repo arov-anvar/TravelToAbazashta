@@ -4,15 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.Result"
+    android:background="@drawable/main_back"
     android:orientation="vertical"
-    android:background="@drawable/main_back" >
+    tools:context=".view.Result">
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/piechart"
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_height="300dp" />
 
+    <TextView
+        android:id="@+id/count_right_answer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/right_answer"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/count_lose_answer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/lose_answer"
+        android:layout_marginTop="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 </LinearLayout>
