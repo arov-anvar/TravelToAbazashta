@@ -1,5 +1,6 @@
 package com.example.traveltoabazashta.view;
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -53,7 +54,7 @@ public class Result extends AppCompatActivity {
 
         List<PieEntry> yvalues = new ArrayList<>();
         yvalues.add(new PieEntry(rightAnswer, BUNDLE_KEY_ZERO_INDEX));
-        yvalues.add(new PieEntry(10, BUNDLE_KEY_SECOND_INDEX));
+        yvalues.add(new PieEntry(COUNT_RIGHT, BUNDLE_KEY_SECOND_INDEX));
         PieDataSet dataSet = new PieDataSet(yvalues, EMPTY_STRING);
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
 
@@ -62,7 +63,6 @@ public class Result extends AppCompatActivity {
         xVals.add(NO_RIGHT);
         PieData data = new PieData(dataSet);
 
-        // In percentage Term
         data.setValueFormatter(new PercentFormatter());
         mPieChart.setData(data);
 

@@ -58,7 +58,6 @@ public class Presenter {
         return data;
     }
 
-
     public void setRecord(int result, int userId, int indexTest) {
         int record;
         database = dbHelper.getReadableDatabase();
@@ -84,6 +83,7 @@ public class Presenter {
         myCursor.moveToFirst();
         for (int i = 0; i < myCursor.getCount(); ++i) {
             loginUsers.add(myCursor.getString(1));
+            myCursor.moveToNext();
         }
         database.close();
         myCursor.close();
@@ -96,5 +96,20 @@ public class Presenter {
         cv.put(DatabaseHelper.COLUMN_USER_NAME, name);
         database.insert(DatabaseHelper.TABLE_USERS, null, cv);
         database.close();
+    }
+
+    public ArrayList<Integer> getRecords(String userName) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        database = dbHelper.getWritableDatabase();
+        myCursor = database.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_USERS, null);
+        myCursor.moveToFirst();
+        while (!myCursor.getString(1).equals(userName)) {
+            myCursor.moveToNext();
+        }
+        arr.add(myCursor.getInt(2));
+        arr.add(myCursor.getInt(3));
+        arr.add(myCursor.getInt(4));
+
+        return arr;
     }
 }
