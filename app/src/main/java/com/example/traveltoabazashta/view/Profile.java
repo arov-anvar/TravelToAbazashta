@@ -1,6 +1,8 @@
 package com.example.traveltoabazashta.view;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +11,6 @@ import android.widget.TextView;
 import com.example.traveltoabazashta.R;
 import com.example.traveltoabazashta.present.Presenter;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -26,8 +27,6 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-
         init();
     }
 
@@ -44,6 +43,7 @@ public class Profile extends AppCompatActivity {
         textHistory.setText(records.get(1).toString());
         textLanguage.setText(records.get(2).toString());
         textName.setText(userName);
+
     }
 
     public void start(View view) {

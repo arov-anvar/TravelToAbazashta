@@ -1,6 +1,8 @@
 package com.example.traveltoabazashta.view;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,13 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.example.traveltoabazashta.R;
 import com.example.traveltoabazashta.model.DataQuestion;
+import com.example.traveltoabazashta.model.Value;
 import com.example.traveltoabazashta.present.Presenter;
 
 import java.util.ArrayList;
 
 public class Testing extends AppCompatActivity {
 
-    private final int COUNT_ANSWER = 25;
+    private final int COUNT_ANSWER = 1;
 
     private Button answer1, answer2, answer3, answer4, next, info;
     private TextView question;
@@ -103,6 +106,8 @@ public class Testing extends AppCompatActivity {
 
     private void changeAnswer() {
         if (COUNT_ANSWER == indexQuestion + 1) {
+            // добавление рекорда если он есть
+            presenter.setRecord(countRightAnswer, Value.userName, typeTest);
             Intent intent = new Intent(Testing.this, Result.class);
             intent.putExtra("rightAnswer", countRightAnswer);
             startActivity(intent);

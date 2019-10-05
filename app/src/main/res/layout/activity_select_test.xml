@@ -23,7 +23,7 @@
         android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/history"
+        android:text="@string/culture"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
@@ -37,7 +37,7 @@
         android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/language"
+        android:text="@string/history"
         android:textColor="@color/main_text_1"
         android:textSize="@dimen/main_text_size" />
 
@@ -51,7 +51,7 @@
         android:onClick="startTest"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/culture"
+        android:text="@string/language"
         android:textColor="@color/about_us_back"
         android:textSize="@dimen/main_text_size" />
 

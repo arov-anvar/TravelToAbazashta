@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.traveltoabazashta.model.DataQuestion;
 import com.example.traveltoabazashta.model.DatabaseHelper;
+import com.example.traveltoabazashta.model.Value;
 
 import java.util.ArrayList;
 
@@ -58,21 +59,22 @@ public class Presenter {
         return data;
     }
 
-    public void setRecord(int result, int userId, int indexTest) {
+    public void setRecord(int result, String userName, int indexTest) {
         int record;
         database = dbHelper.getReadableDatabase();
-        myCursor = database.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_USERS, null);
-        myCursor.moveToPosition(userId);
+        myCursor = database.rawQuery("select * from " + DatabaseHelper.TABLE_USERS, null);
+        myCursor.moveToPosition(Value.idUser);
         record = myCursor.getInt(indexTest + 1);
         database.close();
         myCursor.close();
         if (result > record) {
             ContentValues cv = new ContentValues();
             cv.put(getTestName(indexTest), result);
-            database = dbHelper.getWritableDatabase();
-            database.update("users", cv, "_id="+userId, null);
+            database = dbHelper.getReadableDatabase();
+//            int updCount = database.update(DatabaseHelper.TABLE_USERS, cv, "_id = ?", new String[] { Value.idUser.toString() });
+//            int a = database.update(DatabaseHelper.TABLE_USERS, cv, DatabaseHelper.COLUMN_ID + "=" + Value.idUser, null);
+            int a = database.update(DatabaseHelper.TABLE_USERS, cv, "_id="+(Value.idUser + 1), null);
             database.close();
-            myCursor.close();
         }
     }
 
@@ -100,16 +102,14 @@ public class Presenter {
 
     public ArrayList<Integer> getRecords(String userName) {
         ArrayList<Integer> arr = new ArrayList<>();
-        database = dbHelper.getWritableDatabase();
+        database = dbHelper.getReadableDatabase();
         myCursor = database.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_USERS, null);
-        myCursor.moveToFirst();
-        while (!myCursor.getString(1).equals(userName)) {
-            myCursor.moveToNext();
-        }
+        myCursor.moveToPosition(Value.idUser);
         arr.add(myCursor.getInt(2));
         arr.add(myCursor.getInt(3));
         arr.add(myCursor.getInt(4));
-
+        database.close();
+        myCursor.close();
         return arr;
     }
 }

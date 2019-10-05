@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.traveltoabazashta.R;
+import com.example.traveltoabazashta.model.Value;
 import com.example.traveltoabazashta.present.Presenter;
 
 import java.lang.reflect.Array;
@@ -36,6 +37,8 @@ public class LoginToAccount extends AppCompatActivity {
         String nameLogin = inputLogin.getText().toString();
         ArrayList<String> logins = presenter.getUserLogins();
         if (logins.indexOf(nameLogin) > -1) {
+            Value.idUser = logins.indexOf(nameLogin);
+            Value.userName = nameLogin;
             Intent intent = new Intent(LoginToAccount.this, Profile.class);
             intent.putExtra("userName", nameLogin);
             startActivity(intent);
